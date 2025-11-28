@@ -1,3 +1,4 @@
+%%writefile app.py
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -75,7 +76,7 @@ else:
         st.success("Prediksi Berhasil!")
         st.metric(
             label="Estimasi Harga Prediksi",
-            value=original_price
+            value=format_currency(original_price, "IDR", locale="id_ID")
         )
 
       except Exception as e:
